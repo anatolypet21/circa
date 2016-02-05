@@ -2,9 +2,9 @@
 
   <div class="container">
 
-    <a class="site-title" href="{{ site.baseurl }}/">
-      <img class="desktop" src="{{ site.baseurl }}/images/logo.png">
-      <img class="mobile" src="{{ site.baseurl }}/images/mobilelogo.png">
+    <a class="site-title" href="{{ site.url }}/">
+      <img class="desktop" src="{{ site.url }}/images/logo.png">
+      <img class="mobile" src="{{ site.url }}/images/mobilelogo.png">
     </a>
 
     <nav class="site-nav">
@@ -19,7 +19,7 @@
       <div class="trigger">
         {% for my_page in site.pages %}
           {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          <a class="page-link" href="{{ my_page.url | prepend: site.url }}">{{ my_page.title }}</a>
           {% endif %}
         {% endfor %}
          <!-- <a class="page-link" href="#"><i class="fa fa-search"></i></a> -->
@@ -35,7 +35,7 @@
           <div class="col width30 ">
           </div>
           <div class="col-sm-3 left-img">
-            <img class="womenimg" src="{{ site.baseurl }}/images/profile_header_women.png">
+            <img class="womenimg" src="{{ site.url }}/images/profile_header_women.png">
           </div>
           <div class="col-sm-9 right-memo">
             <div class="memo">
