@@ -194,6 +194,9 @@ section{
 	.page{
 		padding-top: 70px;
 		@media screen and (max-width: $mobile-start) {
+			padding-top: 75px;
+		}
+		@media screen and (max-width: $laptop-large) {
 			padding-top: 35px;
 		}
 	}
