@@ -1,0 +1,44 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <a href="#">contact</a>
+        <a href="#">terms</a>
+      </div>
+      
+      <div class="footer-col footer-col-2 right">
+        <ul class="social-media-list">
+          {% if site.twitter_username %}
+          <li>
+            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+          </li>
+          {% endif %}
+
+          {% if site.facebook_username %}
+          <li>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+          </li>
+          {% endif %}
+
+          {% if site.instagram_username %}
+          <li>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="{{ site.url }}/js/jquery.js"></script>
+<script src="{{ site.url }}/js/bootstrap.min.js"></script>
+<script src="{{ site.url }}/js/jquery.prettyPhoto.js"></script>
+<script src="{{ site.url }}/js/jquery.isotope.min.js"></script>
+<script src="{{ site.url }}/js/main.js"></script>
+<script src="{{ site.url }}/js/wow.min.js"></script>

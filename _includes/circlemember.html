@@ -1,0 +1,28 @@
+<div class="row">
+    {% for post in site.posts limit:30 %}
+        <div class="col-sm-6 wow fadeInDown card">
+            <div class="col-sm-3 wow fadeInDown profilepic">
+                <img src="{{ site.url }}/{{ post.cardimg }}">
+            </div>
+            <div class="col-sm-9 wow fadeInDown cardcontent">
+               <div class="title">
+                    <h3>{{ post.title }} </h3>
+                    <span class="date">Joined circle {{ post.joindate }}</span>
+               </div>
+               <div class="funded">
+                    <span class="price">
+                        ${{ post.price }}   
+                    </span>
+                    <span class="funded-permonth">
+                    Funding<br/> per cycle
+                    </span>
+               </div>
+               <div class="clear"></div>
+               <div class="contents">
+                   {{ post.description  | stop_html | truncatewords: 25  }}
+               </div>
+            </div>
+        </div>
+    {% endfor %}
+
+</div>

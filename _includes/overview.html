@@ -1,0 +1,18 @@
+<div class="row">
+    
+    {% for item in page.overview %}
+        <div class="title">
+            {{ item.title }}
+        </div>
+        <div class="mobile sidebar">
+        	{% include mobileside.html %}
+        </div>
+        <div class="content">
+            {{ item.content }}
+        </div>
+        <div class="mobile offer">
+        	{% include mobileoffer.html %}
+        </div>
+    {% endfor %}
+
+</div>

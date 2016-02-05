@@ -1,0 +1,598 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@import "bootstrap";
+
+$spacing-section:     10px;
+$header_height: 	100px;
+$logo_height: 		56px;
+$back_color:		#F6F6F6;
+$small_size:		8px;
+$common_font_size:	14px;
+$title_font_size: 	18px;
+$h2_font_size: 		34px;
+$h3_font_size: 		30px;
+$a_visited:			#00cc66;
+$a_default: 		#111 !default;
+$footer_back: 		#474c4a;
+
+$break-small: 320px;
+$laptop-large: 768px;
+$mobile-start: 1300px;
+
+
+
+h2{
+	font-size: $h2_font_size;
+}
+h3{
+	font-size: $h3_font_size;
+}
+.width30{
+	width: 30px;
+    float: left;
+    min-height: 1px;
+    @media screen and (max-width: $laptop-large) {
+    	display: none;	
+    }
+}
+nav.site-nav{
+	a{
+		color: $a_default;
+		text-decoration: none;
+	}
+	a:visited{
+		text-decoration: none;
+	}
+	a:hover{
+		text-decoration: none;
+		color: $a_visited;
+	}	
+	.tigger{
+		.page-link{
+			font-weight: bold;
+		}
+	}
+} 
+.hero{
+	background-image:url('/images/heroimg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+	.container{
+		padding-top: 90px;
+		padding-bottom: 10px;
+	}
+	.womenimg{
+		width: 100%;
+		position: absolute;
+		z-index: 10;
+		@media screen and (max-width: $laptop-large) {
+			position: relative;
+		}
+	}
+	.right-memo{
+		width: calc(75% - 45px);
+		.memo{
+		    background-color: rgba(0, 0, 0, 0.8);
+		    padding: 25px;
+		    color: #FFF;
+		    margin-top: 50px;
+		    margin-bottom: 15px;
+		    margin-left: 20px;
+		   
+		    p{
+		    	margin-bottom: 0;
+		    	font-size: $common_font_size;
+		    }
+		}
+	}
+}
+.main{
+	background: $back_color;
+}
+
+section{
+	padding-top: $spacing-section;
+}
+#profile{
+	position: relative;
+	.left-accordian{
+		position: absolute;
+		right: calc(50% + 1170px/2);
+		top: 10px;
+		@media screen and (max-width: $mobile-start) {
+		    position: relative;
+		    max-width: 1170px;
+		    right: 0;
+		    margin: auto;
+	  	}
+	  	@media screen and (min-width: $laptop-large) {
+	    	max-width: 750px;
+	    }
+
+	    @media screen and (max-width: $laptop-large) {
+
+	    }
+		ul{
+			border: none;
+			@media screen and (max-width: $mobile-start) {
+			    margin-left: 0;
+				padding: 15px;
+				padding-top: 0;
+			}
+			li{
+			    text-transform: uppercase;
+		        box-shadow: 2px 2px 2px #8f8f8f;
+		        margin-bottom: 5px;
+		        background: #ECEDED;
+		        a{
+		        	font-weight: bold;
+		        	margin: 0;
+		        	border-radius: 0;
+		        	color: #000;
+		        }
+	        }
+		    li.active{
+	    	    border-left: 5px solid $a_visited;
+		    	a{
+		    		color: $a_visited;
+		    	}
+			}
+		}
+	}
+	.overview{
+		padding-bottom: 90px;
+		@media screen and (max-width: $mobile-start) {
+			padding-bottom: 0px;
+		}
+		div.title, div.content{
+			background: #FFF;
+		    padding: 50px;
+		    color: #474c4a;
+		    border-radius: 5px;
+		    box-shadow: 2px 2px 1px #888888;
+		    margin-bottom: 13px;
+		    padding-bottom: 60px;
+		}
+		div.title{
+		    font-weight: bold;
+		    font-size: $title_font_size;
+		    padding-top: 100px;
+		}
+		div.fund{
+			background: #f5386e;
+		    border-radius: 5px;
+		    text-align: center;
+		    padding: 20px 0;
+		    color: #FFF;
+		    margin-bottom: 10px;
+		    h3{
+	    	    margin-bottom: 0;
+			    text-transform: uppercase;
+			    font-size: 24px;
+		    }
+		}
+	}
+}
+
+#circlemember{
+	position: relative;
+	padding-bottom: 180px;
+	.clear{
+		clear: both;
+	}
+	h3.meet{
+		font-size: 20px;
+		margin-bottom: 30px;
+		@media screen and (max-width: $mobile-start) {
+			margin-bottom: 15px;
+		}
+	}
+	
+	.page{
+		padding-top: 70px;
+		@media screen and (max-width: $mobile-start) {
+			padding-top: 35px;
+		}
+	}
+	.row{
+		.card{
+			background: #FFF;
+			margin-bottom: 25px;
+			border-radius: 5px;
+			box-shadow: 2px 2px 1px #888888;
+			width: calc(50% - 12.5px);
+			padding: 20px;
+			min-height: 170px;
+			@media screen and (max-width: $mobile-start) {
+				width: 100%;
+			}
+			.profilepic{
+				padding: 0;
+			}
+			.title{
+				float: left;
+				font-size: 13px;
+				h3{
+					font-size: $title_font_size;
+					margin-bottom: 5px;
+				}
+				.date{
+					color: #a3a5a4;
+				}
+			}
+			.funded{
+				float: right;
+				width: 100px;
+				.price{
+					font-size: 24px;
+					font-weight: bold;
+					float: left;
+					margin-right: 5px;
+				}
+				.funded-permonth{
+					float: left;
+					font-size: $small_size;
+				    margin-top: 5px
+				}
+				
+			}
+			.contents{
+				margin-top: 13px;
+			}
+		}
+		.card:nth-child(odd){
+			margin-right: 25px;
+		}
+	}
+	
+
+	.left-accordian{
+		position: absolute;
+		right: calc(50% + 1170px/2);
+		top: 10px;
+		@media screen and (max-width: $mobile-start) {
+		    position: relative;
+		    max-width: 1170px;
+		    right: 0;
+		    margin: auto;
+	  	}
+	  	@media screen and (min-width: $laptop-large) {
+	    	max-width: 750px;
+	    }
+
+	    @media screen and (max-width: $laptop-large) {
+
+	    }
+		ul{
+			border: none;
+			@media screen and (max-width: $mobile-start) {
+			    margin-left: 0;
+				padding: 15px;
+				padding-top: 0;
+			}
+			li{
+			    text-transform: uppercase;
+		        box-shadow: 2px 2px 2px #8f8f8f;
+		        margin-bottom: 5px;
+		        background: #ECEDED;
+		        a{
+		        	font-weight: bold;
+		        	margin: 0;
+		        	border-radius: 0;
+		        	color: #000;
+		        }
+	        }
+		    li.active{
+	    	    border-left: 5px solid $a_visited;
+		    	a{
+		    		color: $a_visited;
+		    	}
+			}
+		}
+	}
+}
+
+header.site-header{
+	border: none;
+	.container{
+		padding-top: calc(#{$header_height} / 2 - #{$logo-height}/ 2) ;
+		padding-bottom: calc(#{$header_height} / 2 - #{$logo-height}/ 2) ;
+	}
+}
+
+.tab-wrap{
+	margin-bottom: 10px;
+	.media{
+		border-radius: 5px;
+    	box-shadow: 2px 2px 1px #888888;
+	}
+	.parrent{
+		width: 100%;
+		ul{
+			margin-left: 0;
+			li{
+		        float: none;
+			    border-bottom: 1px solid #d4d4d4;
+			    padding: 0;
+			    margin: 0;
+			    border-right: 1px solid #d4d4d4;
+			    border-left: 1px solid #d4d4d4;
+			    border-radius: 0px;
+			    text-align: center;
+			    font-size: $title_font_size;
+				font-weight: bold;
+			    a, a:visited{
+			    	color: #5e6260;	
+			    	
+			    }
+			}
+			li:first-child{
+				border-top: 1px solid #d4d4d4;
+			}
+			li.active a{
+				margin-right: 0;
+				color: #5e6260;
+			}
+		}
+		.tab-content{
+			background: #FFF;
+		    border-top-right-radius: 5px;
+		    border-top-left-radius: 5px;
+		    margin-bottom: 0;
+
+		    .media{
+		     	text-align: center;
+		     	.numcontent{
+	     		    margin-top: 65px;
+		     		span{
+		     			font-size: 16px;
+		     			font-weight: bold;
+		     			.num{
+		     				font-size: 36px;
+		     			}
+		     		}
+		     		p{
+		     			font-size: $small_size;
+		     		}
+		     	}
+		     	.centerimg{
+		     		padding-left: 0;
+		     		padding-right: 0;
+		     		.img-responsive{
+			     	    width: 100%;
+					    margin-top: 35px;
+					    margin-bottom: 55px;
+			     	}
+		     	}
+		    }
+		}
+	}
+}
+
+.offer.row{
+	margin: 0;
+	padding: 35px;
+    background: #FFF;
+    margin: 0;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px #888888;
+    position: relative;
+    .offertitle{
+    	font-size: $title_font_size;
+    	font-weight: bold;
+    	margin-bottom: 10px;
+	    text-transform: uppercase;
+
+    }
+    .img-responsive{
+    	border-radius: 50%;
+    }
+    #triangle-left{
+		width: 0;
+		height: 0;
+		border-top: 20px solid #e7f2fe;
+		border-left: 20px solid transparent;
+	    position: absolute;
+	    left: calc(25% - 5px);
+	    top: 100px;
+	}
+    .offercontent{
+    	background: #e7f2fe;
+    	font-size: $common_font_size;
+    	border-radius: 5px;
+	    padding-bottom: 10px;
+    	padding-top: 10px;
+    	
+    }
+}
+
+.site-footer{
+	background: $footer_back;
+	padding: 10px 0;
+	a{
+		color: #FFF;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding-left: 54px;
+	}
+	a:visited{
+		text-decoration: none;
+		color: #FFF;
+	}
+	a:hover{
+		text-decoration: none;
+		color: $a_visited;
+	}	
+	.right{
+		float: right;
+	}
+	.footer-col{
+		margin-bottom: 0;
+	}
+	.footer-col-2{
+		width: auto;
+    	margin-right: 40px;
+		ul{
+			li{
+				float: left;
+				a{
+					padding-left: 15px;
+    				font-size: 25px;
+				}
+			}
+		}
+	}
+}
+
+/* Using SCSS variables to store breakpoints */
+
+$first-tablet: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 640px;
+@media screen and (min-width: $breakpoint-tablet) {
+  	.desktop{
+  		display: block;
+  	}
+  	.mobile{
+  		display: none;
+  	}
+}
+@media screen and (max-width: $first-tablet) {
+	.hero{
+		.left-img{
+  			width: 30%;
+  			float: left;
+  			padding-right: 0;
+  		}
+  		.right-memo{
+  			width: 65%;
+		    float: right;
+		    padding: 0;
+		    .memo{
+		    	margin: 0;
+		    	margin-right: 10px;
+		    	margin-left: 10px;
+		    }
+  		}
+	}
+
+	#profile{
+		.overview{
+			div.title{
+				padding: 20px;
+			}
+			#triangle-left{
+			    width: 0;
+			    height: 0;
+			    border-bottom: 20px solid #e7f2fe;
+			    border-right: 20px solid transparent;
+			    border-left: none;
+			    border-top: none;
+			    position: absolute;
+			    left: 50px;
+			    top: 50px;
+			}	
+		}	
+			
+	}
+	.sidebar{
+		.tab-wrap{
+			.tab-content{
+				.media{
+					.numcontent{
+						width: 33%;
+						float: left;
+					}
+					.centerimg{
+						width: 33%;
+						float: left;
+						.img-responsive{
+							margin: 35px auto;
+							width: auto;
+						}
+					}
+				}
+			}
+		}
+	}  
+}
+@media screen and (max-width: $breakpoint-tablet) {
+  	.desktop{
+  		display: none;
+  	}
+  	.mobile{
+  		display: block;
+  	}
+  	.hero{
+  		h2{
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
+		h3{
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+  		.left-img{
+  			width: 30%;
+  			float: left;
+  		}
+  		.right-memo{
+  			width: 70%;
+		    float: left;
+		    padding: 0;
+		    .memo{
+		    	margin: 0;
+		    	margin-right: 25px;
+		    	margin-left: 10px;
+		    }
+  		}
+  	}
+  	.site-nav .page-link:not(:last-child){
+	    margin-right: 5px;
+    	letter-spacing: -2px;
+	}
+	#profile{
+		.overview{
+			.col-sm-8.overviewcontent{
+				width: 100%;
+			}
+		}
+		
+	}
+
+	#circlemember{
+		.profilepic{
+			width: 25%;
+			float: left;
+		}
+		.card{
+			min-height: 200px;
+			overflow: hidden;
+			.cardcontent{
+				width: 75%; 
+				float: left;
+				padding: 0;
+			}	
+		}
+		
+	}
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.site-footer a{
+		padding-left: 25px;
+	}
+	.site-footer .footer-col.footer-col-1{
+		width: 50%;
+		float: left;
+	}
+	.site-footer .footer-col2{
+		
+		float: right;
+	}
+	
+}
